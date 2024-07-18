@@ -1,4 +1,6 @@
+#Importing Tabulate Library
 from tabulate import tabulate
+#Creating a Dictionary containing Student data
 data_dict = {
     "std101": {
         "stdname": "Ashish Kumar",
@@ -111,6 +113,7 @@ data_dict = {
         "Total": 171
     }
 }
+#Sorting out Student Based on Marks 
 table_data = []
 for key, student in data_dict.items():
     if student['English'] > 50:
@@ -119,5 +122,5 @@ for key, student in data_dict.items():
 
 
 headers = ["student List"]
-
+#Printing the Output
 print(tabulate(table_data, headers, tablefmt="grid"))
